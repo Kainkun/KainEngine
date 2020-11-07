@@ -4,6 +4,9 @@
     <Filter Include="KainEngine">
       <UniqueIdentifier>{9E63682B-8A1B-AA78-F322-83D4DFF94469}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KainEngine\Events">
+      <UniqueIdentifier>{C211D257-2E28-D0ED-779F-5B0FE3F4A075}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\KainEngine.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\KainEngine\EntryPoint.h">
       <Filter>KainEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\KainEngine\Events\ApplicationEvent.h">
+      <Filter>KainEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KainEngine\Events\Event.h">
+      <Filter>KainEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KainEngine\Events\KeyEvent.h">
+      <Filter>KainEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KainEngine\Events\MouseEvent.h">
+      <Filter>KainEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\KainEngine\Log.h">
       <Filter>KainEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\kepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\KainEngine\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\KainEngine\Log.cpp">
       <Filter>KainEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\kepch.cpp" />
   </ItemGroup>
 </Project>
