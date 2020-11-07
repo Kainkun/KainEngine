@@ -1,0 +1,3 @@
+[submodule "KainEngine/vendor/spdlog"]
+	path = KainEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
