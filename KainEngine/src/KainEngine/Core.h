@@ -10,4 +10,12 @@
 	#error KainEngine only supports Windows
 #endif
 
+#ifdef KE_ENABLE_ASSERTS
+	#define KE_ASSERT(x, ...) {if(!x) {KE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define KE_CORE_ASSERT(x, ...) {if(!(x)) {if(!x)) { KE_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+	#define KE_ASSERT(x, ...)
+	#define KE_CORE_ASSERT(x, ...)
+#endif
+
 #define BIT(x) (1 << x)

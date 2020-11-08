@@ -35,6 +35,8 @@
       <Filter>KainEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\kepch.h" />
+    <ClInclude Include="src\KainEngine\Window.h" />
+    <ClInclude Include="src\KainEngine\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\KainEngine\Application.cpp">
@@ -44,5 +46,6 @@
       <Filter>KainEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\kepch.cpp" />
+    <ClCompile Include="src\KainEngine\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

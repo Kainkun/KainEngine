@@ -1,5 +1,6 @@
 #pragma once
 
+#include "kepch.h"
 #include "KainEngine/Core.h"
 
 namespace KainEngine
