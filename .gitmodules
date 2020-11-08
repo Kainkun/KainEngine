@@ -4,3 +4,6 @@
 [submodule "KainEngine/vendor/GLFW"]
 	path = KainEngine/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "KainEngine/vendor/imgui"]
+	path = KainEngine/vendor/imgui
+	url = https://github.com/TheCherno/imgui

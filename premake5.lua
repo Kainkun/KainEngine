@@ -14,9 +14,11 @@ workspace "KainEngine"
 IncludeDir = {}
 IncludeDir["GLFW"] = "KainEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "KainEngine/vendor/Glad/include"
+IncludeDir["ImGui"] = "KainEngine/vendor/imgui"
 
 include "KainEngine/vendor/GLFW"
 include "KainEngine/vendor/Glad"
+include "KainEngine/vendor/imgui"
 
 project "KainEngine"
 	location "KainEngine"
@@ -40,13 +42,15 @@ project "KainEngine"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 

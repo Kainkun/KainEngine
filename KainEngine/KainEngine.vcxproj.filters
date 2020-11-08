@@ -7,8 +7,14 @@
     <Filter Include="KainEngine\Events">
       <UniqueIdentifier>{C211D257-2E28-D0ED-779F-5B0FE3F4A075}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KainEngine\ImGui">
+      <UniqueIdentifier>{489760D4-3490-7F26-5DC2-64AB491A5F32}</UniqueIdentifier>
+    </Filter>
     <Filter Include="KainEngine\Platform">
       <UniqueIdentifier>{B291BBB0-1EF3-98BE-A760-DF7013C1CF7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KainEngine\Platform\OpenGL">
+      <UniqueIdentifier>{A61E11A2-922E-BD72-FBE7-2191E716AC0B}</UniqueIdentifier>
     </Filter>
     <Filter Include="KainEngine\Platform\Windows">
       <UniqueIdentifier>{ECCD503C-58DB-7E22-E1C1-7A0D4DCE4AD9}</UniqueIdentifier>
@@ -37,6 +43,9 @@
     <ClInclude Include="src\KainEngine\Events\MouseEvent.h">
       <Filter>KainEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\KainEngine\ImGui\ImGuiLayer.h">
+      <Filter>KainEngine\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\KainEngine\Layer.h">
       <Filter>KainEngine</Filter>
     </ClInclude>
@@ -45,6 +54,9 @@
     </ClInclude>
     <ClInclude Include="src\KainEngine\Log.h">
       <Filter>KainEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KainEngine\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>KainEngine\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\KainEngine\Platform\Windows\WindowsWindow.h">
       <Filter>KainEngine\Platform\Windows</Filter>
@@ -58,6 +70,9 @@
     <ClCompile Include="src\KainEngine\Application.cpp">
       <Filter>KainEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\KainEngine\ImGui\ImGuiLayer.cpp">
+      <Filter>KainEngine\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\KainEngine\Layer.cpp">
       <Filter>KainEngine</Filter>
     </ClCompile>
@@ -66,6 +81,9 @@
     </ClCompile>
     <ClCompile Include="src\KainEngine\Log.cpp">
       <Filter>KainEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KainEngine\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>KainEngine\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\KainEngine\Platform\Windows\WindowsWindow.cpp">
       <Filter>KainEngine\Platform\Windows</Filter>
