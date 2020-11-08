@@ -7,6 +7,12 @@
     <Filter Include="KainEngine\Events">
       <UniqueIdentifier>{C211D257-2E28-D0ED-779F-5B0FE3F4A075}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KainEngine\Platform">
+      <UniqueIdentifier>{B291BBB0-1EF3-98BE-A760-DF7013C1CF7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="KainEngine\Platform\Windows">
+      <UniqueIdentifier>{ECCD503C-58DB-7E22-E1C1-7A0D4DCE4AD9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\KainEngine.h" />
@@ -31,21 +37,39 @@
     <ClInclude Include="src\KainEngine\Events\MouseEvent.h">
       <Filter>KainEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\KainEngine\Layer.h">
+      <Filter>KainEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KainEngine\LayerStack.h">
+      <Filter>KainEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\KainEngine\Log.h">
       <Filter>KainEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\KainEngine\Platform\Windows\WindowsWindow.h">
+      <Filter>KainEngine\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KainEngine\Window.h">
+      <Filter>KainEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\kepch.h" />
-    <ClInclude Include="src\KainEngine\Window.h" />
-    <ClInclude Include="src\KainEngine\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\KainEngine\Application.cpp">
       <Filter>KainEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\KainEngine\Layer.cpp">
+      <Filter>KainEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KainEngine\LayerStack.cpp">
+      <Filter>KainEngine</Filter>
+    </ClCompile>
     <ClCompile Include="src\KainEngine\Log.cpp">
       <Filter>KainEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\KainEngine\Platform\Windows\WindowsWindow.cpp">
+      <Filter>KainEngine\Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\kepch.cpp" />
-    <ClCompile Include="src\KainEngine\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
