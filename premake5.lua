@@ -13,8 +13,10 @@ workspace "KainEngine"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "KainEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "KainEngine/vendor/Glad/include"
 
 include "KainEngine/vendor/GLFW"
+include "KainEngine/vendor/Glad"
 
 project "KainEngine"
 	location "KainEngine"
@@ -37,12 +39,14 @@ project "KainEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -54,7 +58,8 @@ project "KainEngine"
 		defines
 		{
 			"KE_PLATFORM_WINDOWS",
-			"KE_BUILD_DLL"
+			"KE_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
