@@ -1,5 +1,6 @@
 workspace "KainEngine"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{
@@ -16,14 +17,18 @@ IncludeDir["GLFW"] = "KainEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "KainEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "KainEngine/vendor/imgui"
 
-include "KainEngine/vendor/GLFW"
-include "KainEngine/vendor/Glad"
-include "KainEngine/vendor/imgui"
+group "Dependencies"
+	include "KainEngine/vendor/GLFW"
+	include "KainEngine/vendor/Glad"
+	include "KainEngine/vendor/imgui"
+group ""
+
 
 project "KainEngine"
 	location "KainEngine"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -56,7 +61,6 @@ project "KainEngine"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -68,22 +72,22 @@ project "KainEngine"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
 		defines "KE_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "KE_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "KE_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		symbols "On"
 
 
@@ -92,6 +96,7 @@ project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -115,7 +120,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -126,15 +130,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "KE_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "KE_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "KE_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		symbols "On"
