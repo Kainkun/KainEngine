@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "KainEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "KainEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "KainEngine/vendor/imgui"
+IncludeDir["glm"] = "KainEngine/vendor/glm"
 
 group "Dependencies"
 	include "KainEngine/vendor/GLFW"
@@ -39,7 +40,9 @@ project "KainEngine"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -48,7 +51,8 @@ project "KainEngine"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -110,7 +114,9 @@ project "Sandbox"
 	includedirs
 	{
 		"KainEngine/vendor/spdlog/include",
-		"KainEngine/src"
+		"KainEngine/src",
+		"%{IncludeDir.glm}"
+
 	}
 
 	links

@@ -7,3 +7,6 @@
 [submodule "KainEngine/vendor/imgui"]
 	path = KainEngine/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "KainEngine/vendor/glm"]
+	path = KainEngine/vendor/glm
+	url = https://github.com/g-truc/glm
