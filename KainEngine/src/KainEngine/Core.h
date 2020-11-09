@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef KE_PLATFORM_WINDOWS
+#if KE_DYNAMIC_LINK
 	#ifdef 	KE_BUILD_DLL
 		#define KAINENGINE_API __declspec(dllexport)
 	#else
 		#define KAINENGINE_API __declspec(dllimport)
 	#endif
+#else
+#define KAINENGINE_API
+#endif
 #else
 	#error KainEngine only supports Windows
 #endif

@@ -1,5 +1,7 @@
 #include <KainEngine.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public KainEngine::Layer
 {
 public:
@@ -12,6 +14,13 @@ public:
 	{
 		if (KainEngine::Input::IsKeyPressed(KE_KEY_SPACE))
 			KE_TRACE("SPACE IS PRESSED (poll)!!!");
+	}
+
+	void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hell World!");
+		ImGui::End();
 	}
 
 	void OnEvent(KainEngine::Event& event) override
