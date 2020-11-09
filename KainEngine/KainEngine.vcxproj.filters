@@ -71,6 +71,8 @@
       <Filter>KainEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\kepch.h" />
+    <ClInclude Include="src\KainEngine\KeyCodes.h" />
+    <ClInclude Include="src\KainEngine\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\KainEngine\Application.cpp">

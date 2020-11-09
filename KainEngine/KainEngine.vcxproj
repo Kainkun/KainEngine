@@ -155,9 +155,11 @@
     <ClInclude Include="src\KainEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\KainEngine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\KainEngine\Input.h" />
+    <ClInclude Include="src\KainEngine\KeyCodes.h" />
     <ClInclude Include="src\KainEngine\Layer.h" />
     <ClInclude Include="src\KainEngine\LayerStack.h" />
     <ClInclude Include="src\KainEngine\Log.h" />
+    <ClInclude Include="src\KainEngine\MouseButtonCodes.h" />
     <ClInclude Include="src\KainEngine\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\KainEngine\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\KainEngine\Platform\Windows\WindowsWindow.h" />

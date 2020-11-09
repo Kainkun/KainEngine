@@ -10,7 +10,8 @@ public:
 
 	void OnUpdate() override
 	{
-		KE_INFO("ExampleLayer::Update");
+		if (KainEngine::Input::IsKeyPressed(KE_KEY_SPACE))
+			KE_TRACE("SPACE IS PRESSED!!!");
 	}
 
 	void OnEvent(KainEngine::Event& event) override

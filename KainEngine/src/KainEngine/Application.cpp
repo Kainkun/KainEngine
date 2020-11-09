@@ -44,7 +44,7 @@ namespace KainEngine
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 
-		KE_CORE_TRACE("{0}", e);
+		//KE_CORE_TRACE("{0}", e);
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{
@@ -63,9 +63,6 @@ namespace KainEngine
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
-
-			auto [x, y] = Input::GetMousePosition();
-			KE_CORE_TRACE("{0},{1}", x, y);
 
 			m_Window->OnUpdate();
 		}
