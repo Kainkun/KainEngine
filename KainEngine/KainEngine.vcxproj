@@ -151,8 +151,10 @@
     <ClInclude Include="src\KainEngine\LayerStack.h" />
     <ClInclude Include="src\KainEngine\Log.h" />
     <ClInclude Include="src\KainEngine\MouseButtonCodes.h" />
+    <ClInclude Include="src\KainEngine\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\KainEngine\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\KainEngine\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\KainEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\KainEngine\Window.h" />
     <ClInclude Include="src\kepch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
@@ -571,6 +573,7 @@
     <ClCompile Include="src\KainEngine\Layer.cpp" />
     <ClCompile Include="src\KainEngine\LayerStack.cpp" />
     <ClCompile Include="src\KainEngine\Log.cpp" />
+    <ClCompile Include="src\KainEngine\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\KainEngine\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\KainEngine\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\kepch.cpp">

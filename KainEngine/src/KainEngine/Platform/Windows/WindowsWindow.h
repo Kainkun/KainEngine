@@ -1,6 +1,8 @@
 #pragma once
 
 #include "KainEngine/Window.h"
+#include "KainEngine/Renderer/GraphicsContext.h"
+
 #include "GLFW/glfw3.h"
 
 namespace KainEngine
@@ -27,6 +29,7 @@ namespace KainEngine
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{
