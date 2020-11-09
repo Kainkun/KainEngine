@@ -31,7 +31,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new KainEngine::ImGuiLayer());
 	}
 
 	~Sandbox()

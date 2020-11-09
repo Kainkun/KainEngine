@@ -115,6 +115,7 @@ project "Sandbox"
 	{
 		"KainEngine/vendor/spdlog/include",
 		"KainEngine/src",
+		"KainEngine/vendor",
 		"%{IncludeDir.glm}"
 
 	}

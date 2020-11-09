@@ -6,6 +6,8 @@
 #include "KainEngine/Events/Event.h"
 #include "KainEngine/Events/ApplicationEvent.h"
 
+#include "KainEngine/ImGui/ImGuiLayer.h"
+
 namespace KainEngine
 {
 
@@ -29,6 +31,7 @@ namespace KainEngine
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

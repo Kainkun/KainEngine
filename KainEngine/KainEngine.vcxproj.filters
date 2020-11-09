@@ -16,9 +16,6 @@
     <Filter Include="src\KainEngine\Platform">
       <UniqueIdentifier>{496C7F82-B5A3-C719-BEAD-2B3D2A64EE12}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\KainEngine\Platform\OpenGL">
-      <UniqueIdentifier>{5D4990E4-496F-5A4B-32B5-DF161E7A7F17}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\KainEngine\Platform\Windows">
       <UniqueIdentifier>{834FB5CE-EF32-C40E-F835-F24A64988A5F}</UniqueIdentifier>
     </Filter>
@@ -89,9 +86,6 @@
     </ClInclude>
     <ClInclude Include="src\KainEngine\MouseButtonCodes.h">
       <Filter>src\KainEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\KainEngine\Platform\OpenGL\ImGuiOpenGLRenderer.h">
-      <Filter>src\KainEngine\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\KainEngine\Platform\Windows\WindowsInput.h">
       <Filter>src\KainEngine\Platform\Windows</Filter>
@@ -1334,6 +1328,9 @@
     <ClCompile Include="src\KainEngine\Application.cpp">
       <Filter>src\KainEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\KainEngine\ImGui\ImGuiBuild.cpp">
+      <Filter>src\KainEngine\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\KainEngine\ImGui\ImGuiLayer.cpp">
       <Filter>src\KainEngine\ImGui</Filter>
     </ClCompile>
@@ -1345,9 +1342,6 @@
     </ClCompile>
     <ClCompile Include="src\KainEngine\Log.cpp">
       <Filter>src\KainEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\KainEngine\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
-      <Filter>src\KainEngine\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\KainEngine\Platform\Windows\WindowsInput.cpp">
       <Filter>src\KainEngine\Platform\Windows</Filter>
