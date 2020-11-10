@@ -1325,6 +1325,7 @@
     </ClInclude>
     <ClInclude Include="src\KainEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\KainEngine\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\KainEngine\Renderer\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\KainEngine\Application.cpp">
@@ -1355,5 +1356,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\KainEngine\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\KainEngine\Renderer\Shader.cpp" />
   </ItemGroup>
 </Project>

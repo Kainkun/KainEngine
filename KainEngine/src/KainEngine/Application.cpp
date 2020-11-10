@@ -24,11 +24,11 @@ namespace KainEngine
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
 
-		glGenVertexArrays(1, &m_VertexArray);
-		glBindVertexArray(m_VertexArray);
+		glGenVertexArrays(1, &m_VertexArray); //create vertex array
+		glBindVertexArray(m_VertexArray); //use this vertex array
 
-		glGenBuffers(1, &m_VertexBuffer);
-		glBindBuffer(GL_ARRAY_BUFFER, m_VertexBuffer);
+		glGenBuffers(1, &m_VertexBuffer); //create vertex buffer
+		glBindBuffer(GL_ARRAY_BUFFER, m_VertexBuffer); //user this vertex buffer
 
 		float verticies[3 * 3] = {
 			-0.5f, -0.5f,  0.0f,
@@ -36,16 +36,45 @@ namespace KainEngine
 			 0.0f,  0.5f,  0.0f
 		};
 
-		glBufferData(GL_ARRAY_BUFFER, sizeof(verticies), verticies, GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(verticies), verticies, GL_STATIC_DRAW); //explain how vertex buffer is used
 
-		glEnableVertexAttribArray(0);
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
+		glEnableVertexAttribArray(0); //enable vertex attribute array
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr); //set vertex attribute for position
 
-		glGenBuffers(1, &m_IndexBuffer);
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_IndexBuffer);
+		glGenBuffers(1, &m_IndexBuffer); //create index buffer
+		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_IndexBuffer); //user this index buffer
 
 		unsigned int indices[3] = { 0, 1, 2 };
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW); //explain how indices buffer is used
+
+		std::string vertexSrc = R"(
+			#version 330 core
+			
+			layout(location = 0) in vec3 a_Position;
+
+			out vec3 v_Position;
+			
+			void main()
+			{
+				v_Position = a_Position * 0.5 + 0.5;
+				gl_Position = vec4(a_Position,1.0);
+			}
+		)";
+
+		std::string fragmentSrc = R"(
+			#version 330 core
+
+			layout(location = 0) out vec4 color;
+
+			in vec3 v_Position;
+
+			void main()
+			{
+				color = vec4(v_Position,1);
+			}
+		)";
+
+		m_Shader.reset(new Shader(vertexSrc, fragmentSrc));
 	}
 
 	Application::~Application()
@@ -87,6 +116,7 @@ namespace KainEngine
 			glClearColor(0.1f, 0.1f, 0.1f, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
 
+			m_Shader->Bind();
 			glBindVertexArray(m_VertexArray);
 			glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, nullptr);
 
