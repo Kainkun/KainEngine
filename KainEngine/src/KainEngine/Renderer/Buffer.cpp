@@ -3,7 +3,7 @@
 
 #include "Renderer.h"
 
-#include "KainEngine/Platform/OpenGL/OpenGLBuffer.h"
+#include "Platform/OpenGL/OpenGLBuffer.h"
 
 namespace KainEngine
 {
@@ -11,8 +11,8 @@ namespace KainEngine
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None: KE_CORE_ASSERT(false, "RendererAPI::None is currently not supported"); return nullptr;
-		case RendererAPI::OpenGL: return new OpenGLVertexBuffer(verticies, size);
+		case RendererAPI::API::None: KE_CORE_ASSERT(false, "RendererAPI::None is currently not supported"); return nullptr;
+		case RendererAPI::API::OpenGL: return new OpenGLVertexBuffer(verticies, size);
 		}
 
 		KE_CORE_ASSERT(false, "Unknown RendererAPI!");
@@ -23,8 +23,8 @@ namespace KainEngine
 	{
 		switch (Renderer::GetAPI())
 		{
-		case RendererAPI::None: KE_CORE_ASSERT(false, "RendererAPI::None is currently not supported"); return nullptr;
-		case RendererAPI::OpenGL: return new OpenGLIndexBuffer(indices, size);
+		case RendererAPI::API::None: KE_CORE_ASSERT(false, "RendererAPI::None is currently not supported"); return nullptr;
+		case RendererAPI::API::OpenGL: return new OpenGLIndexBuffer(indices, size);
 		}
 
 		KE_CORE_ASSERT(false, "Unknown RendererAPI!");

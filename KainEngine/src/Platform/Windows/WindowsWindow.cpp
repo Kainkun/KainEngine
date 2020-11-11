@@ -5,7 +5,7 @@
 #include "KainEngine/Events/MouseEvent.h"
 #include "KainEngine/Events/KeyEvent.h"
 
-#include "KainEngine/Platform/OpenGL/OpenGLContext.h"
+#include "Platform/OpenGL/OpenGLContext.h"
 
 namespace KainEngine
 {
