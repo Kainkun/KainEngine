@@ -50,19 +50,27 @@ namespace KainEngine
 
 
 		float verticies[3 * 7] = {
-			-0.5f, -0.5f,  0.0f, 0.1f, 0.1f, 0.1f, 1.0f,
-			 0.5f, -0.5f,  0.0f, 0.1f, 0.75f, 0.66f, 1.0f,
-			 0.0f,  0.5f,  0.0f, 1.0f, 0.07f, 0.33f, 1.0f
+			-0.5f, -0.5f,  0.0f,
+				0.1f,0.1f, 0.1f, 1.0f,
+			 0.5f, -0.5f,  0.0f,
+				0.1f, 0.75f, 0.66f, 1.0f,
+			 0.0f,  0.5f,  0.0f,
+				1.0f, 0.07f, 0.33f, 1.0f
 		};
 
 		m_VertexBuffer.reset(VertexBuffer::Create(verticies, sizeof(verticies)));
 
-		BufferLayout layout = {
-			{ShaderDataType::Float3, "a_Position" },
-			{ShaderDataType::Float4, "a_Color" }
-		};
+		{
+			BufferLayout layout = {
+				{ShaderDataType::Float3, "a_Position" },
+				{ShaderDataType::Float4, "a_Color" }
+			};
+
+			m_VertexBuffer->SetLayout(layout);
+		}
 
 		uint32_t index = 0;
+		const auto& layout = m_VertexBuffer->GetLayout();
 		for (const auto& element : layout)
 		{
 			glEnableVertexAttribArray(index);
