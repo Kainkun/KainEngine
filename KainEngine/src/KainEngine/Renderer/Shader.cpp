@@ -111,17 +111,17 @@ namespace KainEngine
 		glDetachShader(m_RendererID, fragmentShader);
 	}
 
-	KainEngine::Shader::~Shader()
+	Shader::~Shader()
 	{
 		glDeleteProgram(m_RendererID);
 	}
 
-	void KainEngine::Shader::Bind() const
+	void Shader::Bind() const
 	{
 		glUseProgram(m_RendererID);
 	}
 
-	void KainEngine::Shader::Unbind() const
+	void Shader::Unbind() const
 	{
 		glUseProgram(0);
 	}

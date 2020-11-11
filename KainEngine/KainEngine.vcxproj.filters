@@ -99,6 +99,9 @@
     <ClInclude Include="src\KainEngine\Platform\OpenGL\OpenGLContext.h">
       <Filter>src\KainEngine\Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\KainEngine\Platform\OpenGL\OpenGLVertexArray.h">
+      <Filter>src\KainEngine\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\KainEngine\Platform\Windows\WindowsInput.h">
       <Filter>src\KainEngine\Platform\Windows</Filter>
     </ClInclude>
@@ -115,6 +118,9 @@
       <Filter>src\KainEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\KainEngine\Renderer\Shader.h">
+      <Filter>src\KainEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KainEngine\Renderer\VertexArray.h">
       <Filter>src\KainEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\KainEngine\Window.h">
@@ -1373,6 +1379,9 @@
     <ClCompile Include="src\KainEngine\Platform\OpenGL\OpenGLContext.cpp">
       <Filter>src\KainEngine\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\KainEngine\Platform\OpenGL\OpenGLVertexArray.cpp">
+      <Filter>src\KainEngine\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\KainEngine\Platform\Windows\WindowsInput.cpp">
       <Filter>src\KainEngine\Platform\Windows</Filter>
     </ClCompile>
@@ -1386,6 +1395,9 @@
       <Filter>src\KainEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\KainEngine\Renderer\Shader.cpp">
+      <Filter>src\KainEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KainEngine\Renderer\VertexArray.cpp">
       <Filter>src\KainEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\kepch.cpp">
